@@ -505,7 +505,7 @@ bool setup(BelaContext *context, void *userData)
 
 	dcm.setVerbose(false);
 // MODIFICATION START
-	touchSensor.setup(1, 0x18, Trill::DIFF,20,2);
+	touchSensor.setup(1, 0x30, Trill::DIFF, 20, 2);
 	Bela_scheduleAuxiliaryTask(Bela_createAuxiliaryTask(readCapSensorLoop, 50, "touchSensorRead", NULL));
 // MODIFICATION END
 	return true;
